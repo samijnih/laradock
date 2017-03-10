@@ -17,22 +17,13 @@ services:
             args:
                 - INSTALL_XDEBUG=true
                 - INSTALL_SOAP=false
-                - INSTALL_MONGO=false
-                - INSTALL_NODE=false
-                - INSTALL_YARN=false
-                - INSTALL_DRUSH=false
-                - INSTALL_AEROSPIKE_EXTENSION=false
-                - INSTALL_V8JS_EXTENSION=false
                 - COMPOSER_GLOBAL_INSTALL=true
                 - INSTALL_WORKSPACE_SSH=true
                 - INSTALL_LARAVEL_ENVOY=true
                 - INSTALL_DEPLOYER=false
                 - INSTALL_LINUXBREW=false
-                - INSTALL_MC=false
                 - PUID=1000
                 - PGID=1000
-                - NODE_VERSION=stable
-                - YARN_VERSION=latest
                 - TZ=Europe/Paris
         volumes_from:
             - applications
@@ -50,15 +41,10 @@ services:
             args:
                 - INSTALL_XDEBUG=true
                 - INSTALL_SOAP=false
-                - INSTALL_MONGO=false
                 - INSTALL_ZIP_ARCHIVE=false
                 - INSTALL_BCMATH=false
                 - INSTALL_PHPREDIS=false
-                - INSTALL_MEMCACHED=false
-                - INSTALL_OPCACHE=false
                 - INSTALL_EXIF=false
-                - INSTALL_AEROSPIKE_EXTENSION=false
-                - CODEIGNITER=false
             dockerfile: Dockerfile-70
         volumes_from:
             - applications
